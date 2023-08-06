@@ -1,0 +1,28 @@
+/*
+Jakob Calvert
+20113992
+This is the style sheet for the entire project
+*/
+
+.error {
+  color: red;
+}
+.main {
+  background-color: #B9D9EB; 
+  color: blue;  
+  padding: 40px; 
+  border-radius: 10px; 
+  font-family: Sans-Serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}

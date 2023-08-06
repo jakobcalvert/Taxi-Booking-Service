@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    Jakob Calvert
+    20113992
+    this file contains all of the html for the booking page it provides the back bone and allows the user to input data
+  -->
+<head>
+  <!--these head lines set up the page to have thet required java script and the css-->
+    <title>Booking Request</title>
+    <script src="booking.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main">
+<h1>Booking Request</h1>
+  <!--handles the inputs of the user-->
+	<form>
+	    <label for="cname">Customer Name:</label>
+        <input type="text" name="cname"><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone"><br>
+
+        <label for="unumber">Unit Number:</label>
+        <input type="text" name="unumber"><br>
+
+        <label for="snumber">Street Number:</label>
+        <input type="text" name="snumber"><br>
+
+        <label for="stname">Street Name:</label>
+        <input type="text" name="stname"><br>
+
+        <label for="sbname">Suburb:</label>
+        <input type="text" name="sbname"><br>
+
+        <label for="dsbname">Destination Suburb:</label>
+        <input type="text" name="dsbname"><br>
+
+        <label for="date">Pick-Up Date:</label>
+        <input type="date" name="date"value="<?php echo date('Y-m-d'); ?>"><br>
+
+        <label for="time">Pick-Up Time(HH:MM):</label>
+        <input type="text" name="time" value="00:00" pattern="^([01][0-9]|2[0-3]):[0-5][0-9]$"><br>
+        <div class="error" id="invalidInputDiv"></div>
+
+        <input type="button" name="sbutton" value="Submit" onClick="getData('booking.php', 'reference', this.form.cname.value, this.form.phone.value, this.form.unumber.value, this.form.snumber.value, this.form.stname.value, this.form.sbname.value, this.form.dsbname.value, this.form.date.value, this.form.time.value);">
+	    
+	</form>
+<div id="reference"></div>
+</div>
+</body>
+</html>

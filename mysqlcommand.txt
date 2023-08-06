@@ -1,0 +1,58 @@
+Jakob Calvert
+20113992
+This file contains all of the sql queries I used throughout the codes
+
+CREATE TABLE requests (
+        booking_number VARCHAR(8) PRIMARY KEY,
+        customer_name VARCHAR(255) NOT NULL,
+        phone_number VARCHAR(12) NOT NULL,
+        unit_number VARCHAR(10),
+        street_number VARCHAR(10) NOT NULL,
+        street_name VARCHAR(255) NOT NULL,
+        suburb VARCHAR(255),
+        destination_suburb VARCHAR(255),
+        pickup_date DATE NOT NULL,
+        pickup_time TIME NOT NULL,
+        assignment_status VARCHAR(20),
+        booking_date DATE NOT NULL,
+        booking_time TIME NOT NULL
+    );
+
+SELECT * FROM requests;
+
+SELECT * FROM requests WHERE booking_number = '$search';
+
+UPDATE requests
+SET assignment_status = 'Assigned'
+WHERE booking_number = '$bookingNumber';
+
+INSERT INTO requests (
+    booking_number,
+    customer_name,
+    phone_number,
+    unit_number,
+    street_number,
+    street_name,
+    suburb,
+    destination_suburb,
+    pickup_date,
+    pickup_time,
+    assignment_status,
+    booking_date,
+    booking_time
+) VALUES (
+    '$bookingNumber',
+    '$name',
+    '$phone',
+    '$unumber',
+    '$snumber',
+    '$stname',
+    '$sbname',
+    '$dsbname',
+    '$date',
+    '$time',
+    '$assign',
+    '$currentDate',
+    '$currentTime'
+);
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+Jakob Calvert
+20113992
+This html sets up the frame work for the admin page
+-->
+<html>
+<head>
+  <!--these head lines set up the page to have thet required java script and the css-->
+  <title>Booking Request Search</title>
+  <script src="admin.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--create the search boc and the button to submit the search query and the content div to print the results-->
+  <div class="main">
+    <h1>Booking Request Search</h1>
+    <label for="bsearch">Search by Reference Number:</label>
+    <input type="text" name="bsearch" id="bsearch" placeholder="Enter reference number">
+    <button type="button" name="sbutton" onclick="getData('admin.php', 'content', 'bsearch');">Search Booking</button>
+    <div class="content"></div>
+  </div>
+</body>
+</html>
